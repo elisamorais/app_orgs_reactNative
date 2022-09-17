@@ -14,8 +14,8 @@ export default function Cesta() {
     <View style={estilos.cesta}>
         <Text style={estilos.nome}>Cesta de Verduras</Text>
         <View style={estilos.fazenda}>
-            <Image source={logo} style={estilos.imagemFazenda} />
-            <Text style={estilos.nomeFazenda}>Jenny Jack Farm</Text>
+        <Image source={logo} style={estilos.imagemFazenda} />
+        <Text style={estilos.nomeFazenda}>Jenny Jack Farm</Text>
         </View>
         
         <Text style={estilos.descricao}>Uma cesta com produtos selecionados cuidadosamente diretamente direto
@@ -48,7 +48,7 @@ const estilos = StyleSheet.create ({
         color: "#464646",
         fontSize: 26,
         lineHeight: 42,
-        fontFamily: 'MontserratBold',
+        fontWeight: 'bold'
     },
     fazenda: {
         flexDirection: 'row',
@@ -62,8 +62,7 @@ const estilos = StyleSheet.create ({
         fontSize: 16,
         lineHeight: 26,
         marginLeft: 12,
-        fontFamily: 'MontserratRegular',
-
+        fontFamily: 'MontserratBold'
     },
     descricao: {
         color: '#a3a3a3',
