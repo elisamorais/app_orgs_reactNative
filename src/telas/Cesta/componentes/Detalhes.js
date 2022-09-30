@@ -1,18 +1,19 @@
 import React from "react";
-import { View, Image, StyleSheet, Text } from "react-native";
+import { Image, StyleSheet, View, Text } from "react-native";
 
 import Texto from  '../../../componentes/Texto';
-import logo from '../../../../assets/logo.png';
 
-export default function Detalhes () {
+
+
+export default function Detalhes ({ nome, logoFazenda, nomeFazenda, descricao, preco }) {
     return <>
-    <Texto style={estilos.nome}>Cesta de Verduras</Texto>
+    <Texto style={ estilos.nome }>{ nome }</Texto>
     <View style={estilos.fazenda}>
-        <Image source={logo} style={estilos.imagemFazenda} />
-        <Texto style={estilos.nomeFazenda}>Jenny Jack Farm</Texto>
+        <Image source={ logoFazenda } style={ estilos.imagemFazenda } />
+        <Texto style={estilos.nomeFazenda}>{ nomeFazenda }</Texto>
     </View>
-    <Texto style={estilos.descricao}>Uma cesta com produtos selecionados cuidadosamente diretamente direto para a sua cozinha.</Texto>
-    <Text style={estilos.preco}>R$ 40,00</Text>
+    <Texto style={estilos.descricao}>{ descricao }</Texto>
+    <Text style={estilos.preco}>{ preco }</Text>
     </>
 }
 
@@ -21,32 +22,31 @@ const estilos = StyleSheet.create({
         color: "#464646",
         fontSize: 26,
         lineHeight: 42,
-        fontWeight: "bold"
+        fontWeight: "bold",
     },
     fazenda: {
         flexDirection: 'row',
-        paddingVertical: 12
+        paddingVertical: 12,
     },
     imagemFazenda: {
         width: 32,
-        height: 32
+        height: 32,
     },
     nomeFazenda: {
         fontSize: 16,
         lineHeight: 26,
         marginLeft: 12,
-        fontFamily: 'MontserratBold'
     },
     descricao: {
         color: '#a3a3a3',
         fontSize: 16,
-        lineHeight:26
+        lineHeight:26,
     },
     preco: {
         color: '#2A9F85',
         fontWeight: 'bold',
         fontSize: 26,
         lineHeight: 42,
-        marginTop: 8
-    }
-});
+        marginTop: 8,
+    },
+})
